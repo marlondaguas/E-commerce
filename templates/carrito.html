@@ -14,7 +14,7 @@
 
     
         <div class="box-container">
-            {% if session["carrito"] == 0 %}
+            {% if not session["carrito"] %}
             <img src="{{ url_for('static', filename='img/carro.png') }}" alt="" style="display: block; margin: auto;">
             {% else %}
             {% for fila in filas %}

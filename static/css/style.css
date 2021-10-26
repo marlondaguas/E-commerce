@@ -69,6 +69,10 @@ form {
     border-color: #EEE;    
 }
 
+.password {
+    width: 250px;   
+}
+
 .campo:focus {
     outline: none;
     border: 1px solid;
