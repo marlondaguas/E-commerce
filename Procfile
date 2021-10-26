@@ -1,1 +1,1 @@
-web: guniciorn app:app
+web:guniciorn app:app
