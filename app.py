@@ -12,8 +12,6 @@ app.secret_key = "llave_secreta"
 
 
 
-
-
 conexion = sqlite3.connect('database/ecommerce.db', check_same_thread=False)
 cursor = conexion.cursor()
 conexion.commit()
@@ -368,4 +366,4 @@ def eliminar_producto(id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
