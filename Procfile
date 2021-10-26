@@ -1,2 +1,1 @@
-web:guniciorn app:app
-heroku ps
+web: gunicorn app:app --preload
