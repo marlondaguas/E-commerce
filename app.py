@@ -198,6 +198,7 @@ def comprar(id):
     cursor.execute("UPDATE productos SET cantidad = cantidad - 1 WHERE id = ?", (id,))
     cursor.execute("DELETE FROM carrito WHERE id_usuario = ? AND id_producto = ?", (idusuario,id))
     conexion.commit()
+    carro()
     return redirect(url_for('carrito'))
 
 
@@ -212,6 +213,7 @@ def comprartodo():
         cursor.execute("UPDATE productos SET cantidad = cantidad - 1 WHERE id = ?", (fila[0],))
         cursor.execute("DELETE FROM carrito WHERE id_usuario = ? AND id_producto = ?", (idusuario,fila[0]))
     conexion.commit()
+    carro()
     return redirect(url_for('carrito'))
 
 
