@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+
+{% block title %} Home {% endblock %}
+
+
+
+{% block body %}
+
+    <section class="products-det">
+
+        <div class="box-container-det">
+            {% for producto in productos %}
+            <div class="box-det">
+                <div class="image">
+                    <img src="{{producto.imagen}}" width="270" height="300" alt="">
+                </div>
+                <div class="content-det">
+                    <h3 class="producto-titulo">{{producto.nombre}}</h3>
+                    <div class="producto-descripcion"><p>{{producto.descripcion}}</p></div>
+                    <div class="price">$ {{producto.precio}}</div>
+                    <div class="boton-producto"><a href="#" class="btn-producto">Agregar al Carrito</a></div>
+                    <div class="boton-producto"><a href="/comprar/{{producto.id}}" class="btn-producto">Comprar</a></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </section>
+            
+    <section class="comentarios">
+        
+        <form action="{{url_for('comentar')}}" method="post">
+            <div class="caja">
+                <input type="hidden" name="identificador" value="{{session['identificador']}}">
+                <div><textarea name="comentario" class="comentario" id="" placeholder="Ingrese su comentario !!" required></textarea></div>
+                <div class="comentar"><input type="submit" class="btncomentar" value="Comentar"></div>
+            </div>
+        </form>
+        
+        
+        
+        {% for fila in comentarios %}
+        <div class="caja">
+            <div class="caja-datos">
+                <div><span>{{fila.usuario}} </span></div>
+                <div><span>{{fila.fecha}}</span></div>
+            </div>
+            <div class="caja-comentario"><p class="comentario">{{fila.comentario}}</p></div>
+            {% if session["rol"] != 1 %}
+            <div class="eliminarcomentario"><a href="/eliminar_comentario/{{fila.id}}/{{fila.id_producto}}">Borrar Comentario</a></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+
+
+
+{% include 'footer.html' %}
+
+    
+
+{% endblock %}

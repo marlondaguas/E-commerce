@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+
+{% block title %} Home {% endblock %}
+
+
+
+{% block body %}
+    
+
+
+    <section class="home">
+
+        <div class="principal">
+            <div class="slides-container">
+        
+                <div class="slide active">
+
+                    <div class="content">
+                        
+                        <h3>MISION TIC</h3>
+                        
+                        <h3>Equipo 3</h3>
+                    </div>
+
+                    <div class="image"> 
+                        <img src="{{ url_for('static', filename='img/principal.png') }}" alt="">
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <section class="banner-container">
+
+        <div class="banner">
+            <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" alt="">
+            <div class="content">
+                <span>Cantidad Limitadas</span>
+                <h3>Hasta 50% off</h3>
+                <a href="#" class="btm">Ver</a>
+            </div>
+        </div>
+    
+        <div class="banner">
+            <img src="{{ url_for('static', filename='img/banner-2.jpg') }}" alt="">
+            <div class="content">
+                <span>Cantidad Limitadas</span>
+                <h3>Hasta 50% off</h3>
+                <a href="#" class="btm">Ver</a>
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <section class="products">
+
+        <h1 class="title">Nuevos Productos</h1>
+    
+        <div class="box-container">
+            {% for fila in filas %}
+            <div class="box">
+                <div class="estado-producto"><div><span>NUEVO</span></div></div>
+                <div class="icons">
+                    <a href="/agregar_carrito/{{fila.id}}" class="fas fa-shopping-cart"></a>
+                    <a href="/agregar_favoritos/{{fila.id}}" class="fas fa-heart"></a>
+                    <a href="/{{fila.id}}" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{{fila.imagen}}" width="250" height="260" alt="">
+                </div>
+                <div class="content">
+                    <h3>{{fila.nombre}}</h3>
+                    <div class="price">$ {{fila.precio}}</div>
+                </div>
+            </div>
+            {% endfor %}
+            
+    
+        </div>
+    
+    </section>
+
+
+
+{% include 'footer.html' %}
+
+    
+
+{% endblock %}

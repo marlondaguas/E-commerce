@@ -1,0 +1,38 @@
+
+
+{% block footer %}
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Grupo3 SHOP</h3>
+            <a href="/inicio"> <i class="fas fa-arrow-right"></i> Inicio</a>
+            <a href="/producto"> <i class="fas fa-arrow-right"></i> Productos</a>
+            <a href="/favoritos"> <i class="fas fa-arrow-right"></i> Favoritos</a>
+        </div>
+
+        <div class="box">
+            <h3>Contacto</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Telefono </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Correo </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Direccion </a>
+        </div>
+
+        <div class="box">
+            <h3>Acerca de</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+
+
+    </div>
+    
+</section>
+
+<section class="credit">Creado por Grupo3 UniNorte MinTic!</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{%- endblock %}

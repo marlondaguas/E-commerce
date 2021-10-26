@@ -1,0 +1,244 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+}
+
+header div {
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+header .group {
+    color: black;
+    display: inline-block;
+}
+
+header .shop {
+    color: #5CCB5F;
+    display: inline-block;
+    margin-left: 0.3%;
+}
+
+main .main-conteiner {
+    width: 100%;
+    height: 80%;
+}
+
+main .side-bar {
+    width: 15%;
+    height: 500px;
+    font-size: 1.5em;
+    background-color: #5CCB5F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-bar .side-bar-home-logo {
+    width: 100%;
+    height: 10%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Home_Icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.side-bar .side-bar-home-btn {
+    font-size: 1.9rem;
+    color: white;
+    text-decoration: none;
+    margin-top: -15%;
+}
+
+.side-bar .side-bar-user-logo {
+    width:100%;
+    height: 10%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7c/User_font_awesome.svg');
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+.side-bar .usuario {
+    font-size: 1.9rem;
+    color: white;
+    text-decoration: none;
+    margin-top: -15%;
+}
+
+main .admin-dash {
+    width: 83.5vw;
+    height: 500px;
+    background-color: #f3f3f3;
+    display: flex;
+    margin-top: -32.6%;
+    margin-left: 15%;;
+    border-right: #5CCB5F solid 2px;
+}
+
+main .admin-dash-title {
+    background-color: #5CCB5F ;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+
+.admin-dash-title button{
+    position:relative;
+    left: 80%;
+    padding: 0%;
+    margin: 0%;
+    border: none;    
+    width: auto;
+    height: 20px;
+    top: 15px;    
+    box-shadow: gray 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.admin-dash-title h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 3%;
+    margin-top: 15px;
+    
+}
+
+
+
+main .admin-dash-main    {
+    display: block;
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 22%;
+    left: 16%;
+}
+
+.admin-dash-main h3 {
+    color: white;
+    font-size: 1.6rem;
+    background-color: #2E86C1;
+    padding: 10px;
+}
+
+.admin-dash-main .admin-dash-main-info {
+    width: 100%;
+    height: 93%;
+}
+
+.admin-dash-main-info ul {
+    display: flex;
+    list-style: none;
+    margin-top: 3%;
+    margin-left: 2%;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+}
+
+.admin-dash-main-info ul input {
+    width: 10%;
+    height: 10%;
+    border: none;
+    border: black solid 2px;    
+    margin-left: 10px;
+}
+
+#boton-agregar {
+    position: absolute;
+    left: 90%;
+    top: 75px;
+    cursor: pointer;
+}
+
+.admin-dash-main-user-list {
+    width: 100%;
+    height: 75%;
+}
+
+.admin-dash-main-user-list ul li {
+    margin: 40px;
+    font-weight: bold;
+}
+
+.admin-dash-main-user-list button {
+    position: relative;
+    left: 64%;
+}
+
+#boton-editar {
+    position: absolute;
+    left: 54.5%;
+}
+
+footer {
+    display: flex;
+    width: 96%;
+    height: 150px;
+}
+
+footer .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.5em;
+}
+
+.informacion {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    color: #5CCB5F;
+}
+
+.contacto {
+    position: relative;
+    left: 300%;
+    color: #5CCB5F;
+}
+
+.acerca {
+    position: relative;
+    left: 700%;
+    color: #5CCB5F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

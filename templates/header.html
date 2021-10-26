@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} MINTIC {% endblock %}
+
+
+
+{% block body %}
+
+<header class="header">
+
+    <a href="/inicio" class="logo"><i class="fas fa-shopping-basket"></i>Grp3</a>
+
+    <nav class="navbar">
+        <a href="/inicio">Inicio</a>
+        <a href="/producto">Productos</a>
+        <a href="/favoritos">Favoritos</a>
+        <a href="#">Nosotros</a>
+        {% if session["rol"] == 2 or session["rol"] == 3 %}
+        <a href="/admin">Administrador</a>
+        {% endif %}
+    </nav>
+
+    <div class="icons" id="menu-usuario">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="/carrito"><div id="cart-btn" class="fas fa-shopping-cart"><span> {{session["carrito"]}}</span></div></a>
+        <a href="#"><div id="login-btn" class="fas fa-user"><span> {{session["usuario"]}}</span></div></a>
+        <a href="/cerrar_session"><div id="login-btn" class="fas fa-sign-out-alt"><span> Salir</span></div></a>
+    </div>
+
+</header>
+
+
+{% endblock %}

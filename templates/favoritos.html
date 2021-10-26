@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+
+{% block title %} Home {% endblock %}
+
+
+
+{% block body %}
+
+
+    <section class="products">
+
+    
+        <div class="box-container">
+
+            {% for fila in filas %}
+            <div class="box">
+                <div class="icons">
+                    {% if fila.cantidad > 0 %}
+                    <a href="/agregar_carrito/{{fila.id}}" class="fas fa-shopping-cart"></a>
+                    <a href="/{{fila.id}}" class="fas fa-eye"></a>
+                    {% endif %}
+                    <a href="/eliminar_favorito/{{fila.id}}" class="fas fa-times-circle"></a>
+                </div>
+                <div class="image">
+                    <img src="{{fila.imagen}}" width="250" height="260" alt="">
+                </div>
+                <div class="content">
+                    <h3>{{fila.nombre}}</h3>
+                    <h3>$ {{fila.precio}}</h3>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    
+    </section>
+
+
+
+
+
+{% include 'footer.html' %}
+
+
+
+{% endblock %}
